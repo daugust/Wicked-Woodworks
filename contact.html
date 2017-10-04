@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<!-- Meta tag needed for responsive design using media query -->
+	<meta name="viewport" content="width=device-width" />
+	<meta charset="utf-8">
+
+	<title>Wicked Woodworks | Contact</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lobster+Two:400,700i|Raleway:500,700,900" rel="stylesheet"> 
+
+	
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="portfolio.html">Portfolio</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+
+	</header>
+
+	<div class="container">
+		<div class="companyinfo">
+			<h1 >Wicked Woodworks Co</h1>
+			<p>Fort Worth, TX</p>
+		</div>
+			<div class="wrapper">
+				<div class="contact">
+					<h3>Email Me</h3>
+					<div class="alert">Your message has been sent!</div>
+					<form id="contactForm">
+						<p>
+							<label>Name</label>
+							<input type="text" name="name" id="name" placeholder="Jon Doe" required>
+						</p>
+						<p>
+							<label>Company</label>
+							<input type="text" id="company" name="company" placeholder="Optional">
+						</p>
+						<p>
+							<label>Email Address</label>
+							<input type="email" id="email" name="email" placeholder="jdoe@domain.com" required>
+						</p>
+						<p>
+							<label>Phone Number</label>
+							<input type="text" id="phone" name="phone" placeholder="555-555-1234">
+						</p>
+						<p class="full">
+							<label>Message</label>
+							<textarea id="message" name="message" rows="5"></textarea>
+						</p>
+						<p class="full">
+							<button type="submit" class="full">Submit</button>
+						</p>
+					</form>
+				</div>
+			</div>
+	</div>
+
+		<footer>
+			<p>Wicked Woodworks, Copyright &copy 2017</p>
+		</footer>
+
+	</div>
+
+<script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+<script type="text/javascript" src="FirebaseContact/main.js"></script>
+</body>
+</html>

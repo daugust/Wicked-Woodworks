@@ -1,0 +1,306 @@
+/*Global 
+*********************************************************/
+
+/*Box sizing - border box will make working with padding easier.  If something is 300 wide it will include padding and not add to it*/
+*{
+	box-sizing:border-box;
+	margin:0;
+}
+
+body{
+	
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+	background-color: #E8E8E8;
+}
+
+/*setting the images for responsivness on mobile sites*/
+img{
+	max-width: 100%
+	height: auto;
+}
+
+/*Generic containter to keep content centered*/
+.container{
+	width:85%;
+	margin:0 auto;
+}
+
+/*Specific selectors
+****************************/
+header{
+	background:#36454f;
+	border-bottom: 3px solid #C74223;
+}
+
+/*NAV styling for mobile first
+********************************/
+nav ul{
+	margin: 0;  /* ul by default have padding that is why margin and padding is set to zero*/
+	padding: 0;
+	list-style: none;
+}
+
+nav li{
+	text-align: center;	
+	border-bottom: 1px solid #C74223;
+}
+
+nav li:last-child{
+	border-bottom: none;
+}
+
+nav a{
+	color: #C74223;
+	text-decoration: none;
+	display: block;
+	padding: 1.15em;
+}
+
+nav a:hover,
+nav a:focus{
+	background: #C74223;
+	color: #36454f;
+}
+
+
+/*Content on page - mobile first design*/
+#homehero{
+	min-height: 300px;
+	background: url("img/homeHeroOriginal.jpg") no-repeat;
+	background-position: center;
+	background-size: cover;
+	font-family: 'Raleway', sans-serif;
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+				 0px 8px 13px rgba(0,0,0,0.1),
+				 0px 18px 23px rgba(0,0,0,0.1);
+}
+
+#homehero h1{
+	padding-top: 75px;
+	color: #C74223;
+	letter-spacing: 1.5px;
+	font-size: 3em;
+}
+
+
+
+/*Center img - make a block element then center with auto margin on sides*/
+.box img{
+	display: block;
+	margin: 0 auto;
+}
+
+.box{
+	padding: 20px;	
+	border-bottom: 2px solid #C74223;
+}
+
+.box h3{
+	text-align: center;
+	padding: 10px;
+
+}
+
+.box:last-child{
+	border-bottom: none;
+}
+
+/*About me page style
+********************************************/
+#aboutme{
+	background-color: #36454f;
+	color: #C74223;
+	border: 3px solid #C74223;
+	line-height: 1.25em;
+	text-align: center;
+	padding: 3px;
+	margin: 1.5rem;
+}
+
+#aboutme h1,p{
+	padding:1px;
+	margin: 1.25rem;
+}
+
+/*Contact page styles
+*********************************************/
+.companyinfo{
+	padding: 1em;
+}
+
+.contact{
+	background-color: #36454f;
+	color: #C74223;
+}
+
+.wrapper{
+	box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+}
+
+.wrapper > * {
+	padding: 1em;
+}
+
+.contact form{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 20px;
+}
+
+.contact form label{
+	display: block;
+}
+
+.contact form p{
+	margin: 0;
+}
+
+.contact form textarea, button{
+	width:100%;
+}
+
+.contact form button{
+	background-color: #C74223;
+	color:#36454f;
+	border:0;
+	padding: 6px
+}
+
+.contact form input{
+	width: 75%;
+}
+/*footer of page*/
+footer{
+	clear: left;
+	padding: 5px;
+	margin-top: 10px;
+	background-color: #36454f;
+	color:#C74223;
+	text-align: center;
+}
+
+.alert{
+	text-align: center;
+	padding: 10px;
+	background: 
+	color:;
+	margin-bottom: 10px;
+	display: none;
+
+}
+
+
+/*All Media queries below
+**********************************************************/
+
+/*Media query navbar for when we are on desktop */
+@media (min-width: 500px) {
+	nav ul{	
+		list-style: none;
+		text-align: right;
+		font-weight: 700;
+	}
+
+	nav li{
+		display: inline-block;
+		border-bottom: none;
+	}
+
+	nav a{
+		text-decoration: none;
+		color: #C74223;
+		letter-spacing: 1.8px;
+		font-weight: 500;
+		}
+
+	nav a:hover,
+	nav a:focus{
+	background: #C74223;
+	color: #36454f;	
+	}
+
+	/*Contact form media query for larger screens*/
+	.contact form{
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+	}
+
+	/*FULL class will stretch the text area and submit button for larger screens*/
+	.contact form .full{
+		grid-column: 1 / 3;
+	}
+
+	.contact form textarea, button{
+		width:75%;
+	}
+
+	/*sticky footer so when there isnt enough contact footer will stay at bottom*/
+	footer{
+		margin-top: 10px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
+/*Media query for box class for three icon row on main page*/
+@media (min-width: 900px){
+	#homehero{
+		min-height: 550px;
+	}
+
+	#homehero h1{
+		padding-top: 175px;
+		font-size: 5em;
+	}
+
+	#homesidekick{
+		margin-top: 2em;
+	}
+
+	.box{
+		float: left;
+		border-bottom: none;
+		width: 30%;
+		padding: 10px;
+		text-align: center;
+		line-height: 1.25em;
+	}
+
+	.box:first-child{
+		margin-left: 2em;
+	}
+
+	.box:last-child{
+	border-bottom: none;
+	}
+
+	/*Contact form*/
+	.wrapper > * {
+		padding: 2em;
+	}
+
+/*about me page media query for bigger screens- laptop/desktop*/
+	#aboutme{
+		padding: 15px;
+		max-width: 900px;
+		margin: 2rem auto;
+	}
+
+	/*for larger screens limit the width of the wrapper*/
+	div.wrapper{
+		max-width: 900px;
+		margin:0 auto;
+	}
+}
+
+
+
+
+
+
+
+
+
